@@ -1,47 +1,4 @@
-/*import * as React from 'react';
-import { DataGrid, GridToolbar } from '@mui/x-data-grid';
-import { useDemoData } from '@mui/x-data-grid-generator';
-
-const VISIBLE_FIELDS = ['name', 'rating', 'country', 'dateCreated', 'isAdmin'];
-
-export default function BasicExampleDataGrid() {
-
-  const { data } = useDemoData({
-    dataSet: 'Employee',
-    visibleFields: VISIBLE_FIELDS,
-    rowLength: 200,
-  });
-
-  return (
-    <div style={{ height: 400, width: '100%' }}>
-      <DataGrid {...data} components={{ Toolbar: GridToolbar }} />
-    </div>
-  );
-}
-
-/*import * as React from 'react';
-import {
-  DataGrid,
-  GridToolbarContainer,
-  GridToolbarColumnsButton,
-  GridToolbarFilterButton,
-  GridToolbarExport,
-  GridToolbarDensitySelector,
-} from '@mui/x-data-grid';
-import { useDemoData } from '@mui/x-data-grid-generator';
-
-function CustomToolbar() {
-  return (
-    <GridToolbarContainer>
-      <GridToolbarColumnsButton />
-      <GridToolbarFilterButton />
-      <GridToolbarDensitySelector />
-      <GridToolbarExport />
-    </GridToolbarContainer>
-  );
-}
-
-  
+/*
 function createData(ID, student, course, grade, startDate, endDate) {
     return { ID, student, course, grade, startDate, endDate };
   }
@@ -58,25 +15,6 @@ const rows = [
     createData(753, 'Rebeca Uk', 'Cocina I', 8, '11/11/2021', '26/5/2022'),
     createData(432, 'Sergio Pech', 'Seguridad', 8, '11/11/2021', '26/5/2022'),
   ];
-
-export default function CustomToolbarGrid() {
-  const { data } = useDemoData({
-    dataSet: 'Commodity',
-    rowLength: 10,
-    maxColumns: 6,
-  });
-
-  return (
-    <div style={{ height: 400, width: '100%' }}>
-      <DataGrid
-        {...data}
-        components={{
-          Toolbar: CustomToolbar,
-        }}
-      />
-    </div>
-  );
-}
 */
 
 import * as React from 'react';
@@ -84,7 +22,6 @@ import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import {
   randomCreatedDate,
   randomTraderName,
-  randomUpdatedDate,
 } from '@mui/x-data-grid-generator';
 
 export default function BasicEditingGrid() {
@@ -94,7 +31,6 @@ export default function BasicEditingGrid() {
         components={{ Toolbar: GridToolbar }} 
         rows={rows}
         columns={columns}
-        experimentalFeatures={{ newEditingApi: true }}
       />
     </div>
   );
@@ -115,7 +51,7 @@ const rows = [
     course: "Ingles II",
     grade: 9,
     startDate: randomCreatedDate(),
-    endDate: randomUpdatedDate(),
+    endDate: randomCreatedDate(),
   },
   {
     id: 2,
@@ -123,7 +59,7 @@ const rows = [
     course: "Programacion I",
     grade: 10,
     startDate: randomCreatedDate(),
-    endDate: randomUpdatedDate(),
+    endDate: randomCreatedDate(),
   },
   {
     id: 3,
@@ -131,7 +67,7 @@ const rows = [
     course: "Cocina III",
     grade: 7,
     startDate: randomCreatedDate(),
-    endDate: randomUpdatedDate(),
+    endDate: randomCreatedDate(),
   },
   {
     id: 4,
@@ -139,7 +75,7 @@ const rows = [
     course: "Ingles II",
     grade: 8,
     startDate: randomCreatedDate(),
-    endDate: randomUpdatedDate(),
+    endDate: randomCreatedDate(),
   },
   {
     id: 5,
@@ -147,7 +83,7 @@ const rows = [
     course: "Programacion I",
     grade: 9,
     startDate: randomCreatedDate(),
-    endDate: randomUpdatedDate(),
+    endDate: randomCreatedDate(),
   },
 
 ];
