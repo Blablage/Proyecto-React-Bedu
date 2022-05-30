@@ -19,7 +19,7 @@ class Cursos extends React.Component {
   render() {
     return (
         <div className="carousel">
-        <Carousel breakPoints={this.breakPoints} >
+        <Carousel breakPoints={this.breakPoints}>
             <Card sx={{ maxWidth: 345 }}>
                 <CardActionArea>
                     <CardMedia

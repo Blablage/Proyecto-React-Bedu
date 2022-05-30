@@ -25,7 +25,7 @@ export default function MisionVision() {
   return (
     <Container>
     <Box sx={{ flexGrow: 1, mt: 3}} >
-      <Grid container spacing={2} alignItems="center">
+      <Grid container spacing={2} alignItems="center" id="Mision">
         <Grid item xs={12} md={8}>
             <Item>
               <h2 className='monserrat-font'>Mision</h2>

@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
 return (
-	<Box>
+	<Box id="contactos">
 	<h1 style={{ color: "white", marginTop: "-50px", marginLeft: '40px' }}>
 		StudyCenter
 	</h1>

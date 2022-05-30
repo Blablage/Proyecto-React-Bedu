@@ -8,12 +8,14 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
-const pages = ['Instalaciones', 'Mision y Vision', 'Cursos'];
-const settings = ['Perfil', 'Cuenta', 'Panel de Estudiantes', 'Salir'];
+import StudentDB from './StudentDB'
+import Link from '@mui/material/Link';
+
+//const pages = ['Instalaciones', 'Mision y Vision', 'Cursos'];
+//const settings = ['Perfil', 'Cuenta', 'Panel de Estudiantes', 'Salir'];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -95,11 +97,22 @@ const ResponsiveAppBar = () => {
                     display: { xs: 'block', md: 'none' },
                   }}
               >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">
+                  <Link href="#Mision" color="inherit" underline="none" sx={{ p: 1 }}>Mision y Vision</Link>
+                </Typography>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">
+                  <Link href="#courses" color="inherit" underline="none" sx={{ p: 1 }}>Cursos</Link>
+                </Typography>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">
+                <Link href="#contactos" color="inherit" underline="none" sx={{ p: 1 }}>Contactanos</Link>
+                </Typography>
+              </MenuItem>
+              
             </Menu>
           </Box>
           <Box
@@ -131,16 +144,10 @@ const ResponsiveAppBar = () => {
           >
             StudyCenter
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
+            <Link href="#Mision" color="inherit" underline="none" sx={{ p: 1 }}>Mision y Vision</Link>
+            <Link href="#courses" color="inherit" underline="none" sx={{ p: 1 }}>Cursos</Link>
+            <Link href="#contactos" color="inherit" underline="none" sx={{ p: 1 }}>Contactanos</Link>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
@@ -165,11 +172,9 @@ const ResponsiveAppBar = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
+              <MenuItem key='Panel de Estudiantes' onClick={handleCloseUserMenu}>
+                <Typography textAlign="center">Panel de Estudiantes</Typography>
+              </MenuItem>
             </Menu>
           </Box>
         </Toolbar>
