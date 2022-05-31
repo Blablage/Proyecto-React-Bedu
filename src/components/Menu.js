@@ -10,8 +10,6 @@ import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-
-import StudentDB from './StudentDB'
 import Link from '@mui/material/Link';
 
 //const pages = ['Instalaciones', 'Mision y Vision', 'Cursos'];
@@ -34,6 +32,16 @@ const ResponsiveAppBar = () => {
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
+  };
+
+  const openStudentsTable = () => {
+    setAnchorElUser(null);
+    let home = document.getElementById("home");
+    let studentsTable = document.getElementById("studentsTable");
+    let returnButton = document.getElementById("returnButton");
+    home.style.display = 'none';
+    studentsTable.style.display = "block";
+    returnButton.style.display = "block";
   };
 
   return (
@@ -172,7 +180,7 @@ const ResponsiveAppBar = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              <MenuItem key='Panel de Estudiantes' onClick={handleCloseUserMenu}>
+              <MenuItem key='Panel de Estudiantes' onClick={openStudentsTable}>
                 <Typography textAlign="center">Panel de Estudiantes</Typography>
               </MenuItem>
             </Menu>

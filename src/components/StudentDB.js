@@ -19,20 +19,37 @@ const rows = [
 
 import * as React from 'react';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
+import Container from '@mui/material/Container';
+import Button from '@mui/material/Button';
 import {
   randomCreatedDate,
   randomTraderName,
 } from '@mui/x-data-grid-generator';
 
+const closeStudentsTable = () => {
+  let home = document.getElementById("home");
+  let studentsTable = document.getElementById("studentsTable");
+  let returnButton = document.getElementById("returnButton");
+  home.style.display = 'block';
+  studentsTable.style.display = "none";
+  returnButton.style.display = "none";
+};
+
 export default function BasicEditingGrid() {
   return (
-    <div style={{ height: 1000, width: '100%' }}>
+    <Container>
+      <Button id="returnButton" variant="contained" style={{ margin: "10px", display: 'none' }}onClick={closeStudentsTable}>Regresar</Button>
+    <div 
+      id="studentsTable" 
+      style={{ height: 700, width: '100%', display: 'none', backgroundColor: "white"}}>
+      
       <DataGrid
         components={{ Toolbar: GridToolbar }} 
         rows={rows}
         columns={columns}
       />
     </div>
+    </Container>
   );
 }
 
