@@ -12,9 +12,9 @@ class Instalaciones extends React.Component {
     return (
       <div className="carousel">
       <Carousel breakPoints={this.breakPoints}>
-        <img src="https://thejournal.com/-/media/EDU/THEJournal/2019-Images-Editorial/20190710commons.jpg" alt="" style={{width:'500px'}}/>
-        <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/6693/production/_111995262_gettyimages-1139930327.jpg" alt="" style={{width:'500px'}}/>
-        <img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP1431/1/LHIL153BI25427_USA_000041_Roosevelt_High_School_IMD.JPG" alt="" style={{width:'500px'}}/>
+        <img src="https://sutilweb.com/wp-content/uploads/2022/01/Ciencias-de-la-computacion.jpg" alt="" style={{width:'500px'}}/>
+        <img src="https://vinculotic.com/wp-content/uploads/2020/07/educacion-cuantica-01-1021x580.jpg" alt="" style={{width:'500px'}}/>
+        <img src="https://psicomputacion.com.mx/wp-content/uploads/2020/08/Nosotros-PSI-Computacion.png" alt="" style={{width:'500px'}}/>
       </Carousel>
       </div>
     )
