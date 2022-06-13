@@ -12,9 +12,6 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Link from '@mui/material/Link';
 
-//const pages = ['Instalaciones', 'Mision y Vision', 'Cursos'];
-//const settings = ['Perfil', 'Cuenta', 'Panel de Estudiantes', 'Salir'];
-
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -58,7 +55,7 @@ const ResponsiveAppBar = () => {
                     mr: 1
                   }}
                 alt="Main Icon"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Closed_Book_Icon.svg/1200px-Closed_Book_Icon.svg.png"
+                src={process.env.PUBLIC_URL + '/assets/studyCenterIcon.png'}
             />
           <Typography
             variant="h6"

@@ -25,7 +25,7 @@ class Cursos extends React.Component {
                     <CardMedia
                         component="img"
                         height="300"
-                        image="https://www.stonelinemalaysia.com/wp-content/uploads/2020/02/STC24CO_4-1.jpg"
+                        src={process.env.PUBLIC_URL + '/assets/cocinaIcon.jpg'}
                         alt="Gastronomia"
                     />
                     <CardContent>
@@ -44,7 +44,7 @@ class Cursos extends React.Component {
                     <CardMedia
                         component="img"
                         height="300"
-                        image="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg"
+                        src={process.env.PUBLIC_URL + '/assets/programacionIcon.jpg'}
                         alt="Programacion"
                     />
                     <CardContent>
@@ -63,7 +63,7 @@ class Cursos extends React.Component {
                     <CardMedia
                         component="img"
                         height="300"
-                        image="https://www.britishcouncil.org.mx/sites/default/files/banderas_ingles_britanico_y_americano_.png"
+                        src={process.env.PUBLIC_URL + '/assets/englishIcon.png'}
                         alt="green iguana"
                     />
                     <CardContent>
